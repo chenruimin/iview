@@ -45,6 +45,7 @@ import Upload from './components/upload';
 import { Row, Col } from './components/grid';
 import { Select, Option, OptionGroup } from './components/select';
 import locale from './locale';
+import TooltipGlobal from './components/tooltip-global';
 
 const iview = {
     Affix,
@@ -117,7 +118,8 @@ const iview = {
     Tooltip,
     Transfer,
     Tree,
-    Upload
+    Upload,
+    TooltipGlobal
 };
 
 const install = function (Vue, opts = {}) {
@@ -132,6 +134,7 @@ const install = function (Vue, opts = {}) {
     Vue.prototype.$Message = Message;
     Vue.prototype.$Modal = Modal;
     Vue.prototype.$Notice = Notice;
+    Vue.prototype.$Tooltip = TooltipGlobal;
 };
 
 // auto install
